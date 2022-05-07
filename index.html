@@ -1,36 +1,68 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            color: black;
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width:  210mm;
+        }
+
+        .column-container {
+            display: table;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        .column {
+            display: table-cell;
+            padding: 10px;
+        }
+
+        ul {
+            margin: 8px;
+            padding: 8px;
+        }
+
+        p {
+            padding: auto;
         }
     </style>
 </head>
 
 <body>
-    <h1>Timofey Titovets</h1>
-    <h3><em>SysOps/DevOps/SRE Engineer</em></h3>
-    <hr>
-    <hr>
-    <p>Minsk, Belarus</p>
-    <p>+375-29 506-52-99</p>
-    <p><a href="mailto:nefelim4ag@gmail.com">nefelim4ag@gmail.com</a></p>
-    <h2 id="skills">Skills</h2>
-    <ul>
-        <li><strong>Primary languages</strong>
+    <div class="column-container">
+        <div class="column" style="background-color:rgb(68, 123, 225);">
+            <h2>Timofey Titovets</h2>
+            <h3>
+                <em>SysOps DevOps SRE Engineer</em>
+            </h3>
+    
+            <h2 style="background-color:rgb(46, 107, 221);">Personal Info</h2>
+            <h3> Location </h3>
+            <p>Was: Minsk, Belarus</p>
+            <p>Current: Tbilisi, Georgia</p>
+            <h3> Phone </h3>
+            <p>+375-29 506-52-99</p>
+            <p>+995-59 830 51 37</p>
+            <h3> Email </h3>
+            <p>
+                <a href="mailto:nefelim4ag@gmail.com">nefelim4ag@gmail.com</a>
+            </p>
+            
+            <h2 style="background-color:rgb(46, 107, 221);"> Hard Skills </h2>
+            <strong>Primary languages</strong>
             <ul>
                 <li>C: Linux kernel patches</li>
                 <li>Python/Bash: Scripting</li>
             </ul>
-        </li>
-        <li><strong>Auxiliary languages</strong>
+            <strong>Auxiliary languages</strong>
             <ul>
-                <li>GO: Reading/Patching K8s/Microservices</li>
-                <li>Kotlin: Teamcity DSL</li>>
+                <li>GO: Modify K8s/Microservices</li>
+                <li>Kotlin: Teamcity DSL</li>
             </ul>
-        </li>
-        <li>
             <strong>Tools</strong>
             <ul>
                 <li>CI</li>
@@ -43,15 +75,19 @@
                     <li>Ansible</li>
                     <li>Terraform</li>
                 </ul>
-                <li>Git</li>
+                <li>VCS</li>
                 <ul>
                     <li>GitFlow</li>
                     <li>GitLab</li>
                     <li>Github</li>
                     <li>BitBucket</li>
                 </ul>
-                <li>Fio</li>
-                <li>gprof</li>
+                <li>Benchmarking</li>
+                <ul>
+                    <li>Fio</li>
+                    <li>gprof</li>
+                </ul>
+
                 <li>AWS</li>
                 <ul>
                     <li>EC2</li>
@@ -109,99 +145,113 @@
                     <li>Zabbix</li>
                     <li>Grafana</li>
                     <li>Prometheus</li>
-                    <li>{Metric/Function/Journal/File}beat</li>
+                    <li>Elastic beats</li>
                     <li>Fluentd</li>
                     <li>APM</li>
                 </ul>
             </ul>
-        </li>
-    </ul>
-    <hr>
-    <hr>
-    <h2 id="experience">Experience</h2>
-    <h3>DevOps/SRE at Fabros - Minsk, Belarus.</h3>
-    <h3><em>Jan 2021 - Present</em></h3>
-    <p><strong>Responsibilities:</strong></p>
-    <ul>
-        <li>Everything running in EKS/AWS</li>
-        <li>Manage EKS clusters</li>
-        <li>Configure CI/CD Stuff (GitLab)</li>
-        <li>Manage AWS Infrastructure</li>
-        <li>Support guys with GKE</li>
-    </ul>
-    <p><strong>Key achievements:</strong></p>
-    <ul>
-        <li>Move all our staff to Cloud/K8s</li>
-        <li>Reduce AWS EC2 cost by 10%</li>
-        <li>Implement Green/Blue deploy scheme</li>
-        <li>Implement CI/CD pipeline for most projects</li>
-        <li>Make shared pipelines</li>
-        <li>Write general shared packages for our projects</li>
-        <li>Make our infra reproducible & simple</li>
-        <li>Make prometheus/ELK monitoring great again</li>
-    </ul>
-    <h3>(Part-Time) DevOps at Itransition Group - Minsk, Belarus.</h3>
-    <h3><em>Sep 2019 - Present</em></h3>
-    <p><strong>Responsibilities:</strong></p>
-    <ul>
-        <li>Support Rancher/K8s infrastructure</li>
-        <li>Support AWS infrastructure</li>
-        <li>Support On Premise KVM based infrastructure</li>
-        <li>Network/EC2/On Premise configuration/Security</li>
-        <li>Support Teamcity infrastructure</li>
-        <li>Manage Oracle Cloud Infrastructure</li>
-    </ul>
-    <p><strong>Key achievements:</strong></p>
-    <ul>
-        <li>Move from Rancher v1 -> Rancher v2</li>
-        <li>For cost proporses move some infrastructure to On Promise</li>
-        <li>Create On Premise KVM infrastructure (Proxmox)</li>
-        <li>Build hybrid cross-cloud/on-premise infrastructure</li>
-        <li>Migrate production to Oracle Cloud</li>
-    </ul>
-    <h3>K8s/DevOps Team Lead at Synesis - Minsk, Belarus.</h3>
-    <h3><em>Feb 2018 - Dec 2020</em></h3>
-    <p><strong>Responsibilities:</strong></p>
-    <ul>
-        <li>Make our own On Premise K8s</li>
-        <li>Implement/Support deploy K8s on ansible for multiple clusters</li>
-        <li>Implement/Support storage drivers (flex vol for Ceph/Local storage)</li>
-        <li>Trouble shoot linux problems in our setup</li>
-    </ul>
-    <p><strong>Key achievements:</strong></p>
-    <ul>
-        <li>Create CI for our deploy code</li>
-        <li>Implemented stable (for our needs) rbd driver in K8s</li>
-        <li>Write migration from our code to CSI</li>
-        <li>Move everything to K8s that can be moved</li>
-        <li>Integrated LB based on Keepalived (will be replaced)</li>
-        <li>Route ClusterIP traffic to local endpoints if avaliable</li>
-        <li>ProxyLess HA of K8s API</li>
-        <li>Use cri-o instead of docker</li>
-    </ul>
-    <h3>Linux System Administrator at Itransition Group - Minsk, Belarus.</h3>
-    <h3><em>Feb 2015 - Feb 2018</em></h3>
-    <p><strong>Responsibilities:</strong></p>
-    <ul>
-        <li>Linux infrastructure</li>
-        <li>NFS Servers/VMware Storage</li>
-        <li>Zabbix infrastructure monitoring</li>
-        <li>MySQL administrator</li>
-        <li>Linux workstations AD integration</li>
-    </ul>
-    <p><strong>Key achievements:</strong></p>
-    <ul>
-        <li>Monitoring shine like never before</li>
-        <li>Improved performance on cheap NFS server up to 10x just by RAM cache</li>
-        <li>Our linux infrastructure not painful anymore</li>
-    </ul>
-    <hr>
-    <hr>
-    <h2 id="education">Education</h2>
-    <p><strong>Belarusian State University of Informatics and Radioelectronics</strong></p>
-    <p>Faculty of Computer Systems and Networks, 2018</p>
-    <p><strong>Minsk State Power Energy College</strong></p>
-    <p>Faculty of Computer Systems and Networks, 2014</p>
+        </div>
+        <div class="column" style="border-left: 6px solid green" ; style="background-color:rgb(247, 248, 249);">
+            <h2 id="About">About</h2>
+            <hr>
+            <p>
+                Versatile and hard-working engineer with strong experience in maintaining large-scale software systems. Love to
+                work
+                with people, shared knowledge, and explain complex stuff - an evangelist of technology. I'm good at making hard
+                problems
+                simple.
+            </p>
+            <hr>
+            <h2 id="experience">Experience</h2>
+            <hr>
+            <h3>DevOps/SRE at Fabros - Minsk, Belarus.</h3>
+            <h3><em>Jan 2021 - Present</em></h3>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Everything running in EKS/AWS</li>
+                <li>Manage EKS clusters</li>
+                <li>Configure CI/CD Stuff (GitLab)</li>
+                <li>Manage AWS Infrastructure</li>
+                <li>Support guys with GKE</li>
+            </ul>
+            <p><strong>Key achievements:</strong></p>
+            <ul>
+                <li>Move all our staff to Cloud/K8s</li>
+                <li>Reduce AWS EC2 cost by 10%</li>
+                <li>Implement Green/Blue deploy scheme</li>
+                <li>Implement CI/CD pipeline for most projects</li>
+                <li>Create shared pipelines</li>
+                <li>Create general shared packages for our projects</li>
+                <li>Make our infra reproducible, simple and scalable</li>
+                <li>Make prometheus/ELK monitoring great again</li>
+                <li>Handle around 4000 rps on our own Edge Ingress proxy</li>
+                <li>Grow other Engineers to spread responsibility and knowledge</li>
+            </ul>
+            <h3>(Part-Time) DevOps at Itransition Group - Minsk, Belarus.</h3>
+            <h3><em>Sep 2019 - Present</em></h3>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Support Rancher/K8s infrastructure</li>
+                <li>Support AWS infrastructure</li>
+                <li>Support On Premise KVM based infrastructure</li>
+                <li>Network/EC2/On Premise configuration/Security</li>
+                <li>Support Teamcity infrastructure</li>
+                <li>Manage Oracle Cloud Infrastructure</li>
+            </ul>
+            <p><strong>Key achievements:</strong></p>
+            <ul>
+                <li>Move from Rancher v1 -> Rancher v2</li>
+                <li>For cost proporses move some infrastructure to On Promise</li>
+                <li>Create On Premise KVM infrastructure (Proxmox)</li>
+                <li>Build hybrid cross-cloud/on-premise infrastructure</li>
+                <li>Migrate production to Oracle Cloud</li>
+                <li>Migrate everything from on-premise to Oracle Cloud</li>
+                <li>Grow other Engineers to spread responsibility and knowledge</li>
+            </ul>
+            <h3>K8s/DevOps Team Lead at Synesis - Minsk, Belarus.</h3>
+            <h3><em>Feb 2018 - Dec 2020</em></h3>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Make our own On Premise K8s</li>
+                <li>Implement/Support deploy K8s on ansible for multiple clusters</li>
+                <li>Implement/Support storage drivers (flex vol for Ceph/Local storage)</li>
+                <li>Trouble shoot linux problems in our setup</li>
+            </ul>
+            <p><strong>Key achievements:</strong></p>
+            <ul>
+                <li>Create CI for our deploy code</li>
+                <li>Implemented stable (for our needs) rbd driver in K8s</li>
+                <li>Write migration from our code to CSI</li>
+                <li>Move everything to K8s that can be moved</li>
+                <li>Integrated LB based on Keepalived (will be replaced)</li>
+                <li>Route ClusterIP traffic to local endpoints if avaliable</li>
+                <li>ProxyLess HA of K8s API</li>
+                <li>Use cri-o instead of docker</li>
+            </ul>
+            <h3>Linux System Administrator at Itransition Group - Minsk, Belarus.</h3>
+            <h3><em>Feb 2015 - Feb 2018</em></h3>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Linux infrastructure</li>
+                <li>NFS Servers/VMware Storage</li>
+                <li>Zabbix infrastructure monitoring</li>
+                <li>MySQL administrator</li>
+                <li>Linux workstations AD integration</li>
+            </ul>
+            <p><strong>Key achievements:</strong></p>
+            <ul>
+                <li>Monitoring shine like never before</li>
+                <li>Improved performance on cheap NFS server up to 10x just by RAM cache</li>
+                <li>Our linux infrastructure not painful anymore</li>
+            </ul>
+            <hr>
+            <h2 id="education">Education</h2>
+            <hr>
+            <p><strong>Belarusian State University of Informatics and Radioelectronics</strong></p>
+            <p>Faculty of Computer Systems and Networks, 2018</p>
+            <p><strong>Minsk State Power Energy College</strong></p>
+            <p>Faculty of Computer Systems and Networks, 2014</p>
+        </div>
+        </div>
 </body>
-
 </html>
