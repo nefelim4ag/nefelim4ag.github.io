@@ -1,49 +1,71 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html,
         body {
             width: 210mm;
             margin-left: auto;
             margin-right: auto;
+            font-family: 'Arial', sans-serif;
         }
 
         .column-container {
-            display: table;
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        /* Create two unequal columns that floats next to each other */
-        .column {
-            display: table-cell;
+        .column-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Left column - less width */
+        .column-left {
+            flex: 0.3;
+            padding: 10px;
+        }
+
+        /* Right column - more width */
+        .column-right {
+            flex: 0.7;
             padding: 10px;
         }
 
         ul {
-            margin: 8px;
-            padding: 8px;
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        h2 {
+            background-color: #FFBE98;
+            color: rgb(0, 0, 0);
+            padding: 6px;
         }
 
         p {
             padding: auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                padding: 0;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="column-container">
-        <div class="column" style="background-color:rgb(68, 123, 225);">
+        <div class="column-left" style="background-color:#FFBE98;">
             <h2>Timofey Titovets</h2>
             <h3>
                 <em>SysOps/DevOps/SRE</em>
             </h3>
 
-            <h2 style="background-color:rgb(46, 107, 221);">Personal Info</h2>
+            <h2 style="background-color:#FFBE98;">Personal Info</h2>
             <h3> Location </h3>
             <p>Origin: Minsk, Belarus</p>
             <p>Current: Netherlands, Amsterdam</p>
@@ -54,7 +76,7 @@
                 <a href="mailto:nefelim4ag@gmail.com">nefelim4ag@gmail.com</a>
             </p>
 
-            <h2 style="background-color:rgb(46, 107, 221);"> Hard Skills </h2>
+            <h2 style="background-color:#FFBE98;"> Hard Skills </h2>
             <strong>Primary languages</strong>
             <ul>
                 <li>Python/Bash: Scripting</li>
@@ -122,18 +144,13 @@
                 </ul>
                 <li>K8S</li>
                 <ul>
-                    <li>Ingress nginx/contour/haproxy/alb</li>
+                    <li>Ingresses</li>
                     <li>Flagger</li>
                     <li>Linkerd</li>
                     <li>Calico/Cillium</li>
                     <li>External Secrets Operator</li>
                     <li>Docker/ContainerD/CRI-O</li>
                     <li>Nvidia</li>
-                </ul>
-                <li>Storage</li>
-                <ul>
-                    <li>HW RAID/LVM/iSCSI/NFS & almost all linux FS</li>
-                    <li>Ceph</li>
                 </ul>
                 <li>Databases</li>
                 <ul>
@@ -164,10 +181,10 @@
                 </ul>
             </ul>
         </div>
-        <div class="column" style="background-color:rgb(245, 245, 245);">
+        <div class="column-right" style="background-color:rgb(245, 245, 245);">
             <h2 style="background-color:rgb(230, 230, 230);">About</h2>
             <p>
-                Versatile and hard-working engineer with strong experience in maintaining large-scale software systems.
+                I'm versatile SRE/DevOps engineer with programming skills and strong experience in maintaining large-scale software systems.
                 Love to
                 work
                 with people, shared knowledge, and explain complex stuff - an evangelist of technology. I'm good at
@@ -193,6 +210,8 @@
                 <li>Writing custom replication on python for migrate internal high loaded database (~250gb)</li>
                 <li>Developed lambda for fixup s3/CDN content headers - reduce traffic & recompress png</li>
                 <li>Develop ECS deploy tools to simplify teamcity tasks</li>
+                <li>Design and build Analytics batch processing</li>
+                <li>Migrated Unity builds to docker on cloud VMs</li>
             </ul>
             <h3>DevOps/SRE at Fabros - Minsk, Belarus.</h3>
             <h3><em>Jan 2021 - Nov 2022</em></h3>
